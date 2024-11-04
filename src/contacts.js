@@ -36,6 +36,7 @@ export async function updateContact(id, updates) {
   if (!contact) throw new Error("No contact found for", id);
   Object.assign(contact, updates);
   await set(contacts);
+
   return contact;
 }
 
